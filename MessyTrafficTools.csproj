@@ -19,6 +19,8 @@
     <Reference Include="Colossal.Core"><HintPath>$(CSII_MANAGEDPATH)\Colossal.Core.dll</HintPath><Private>false</Private></Reference>
     <Reference Include="Colossal.Logging"><HintPath>$(CSII_MANAGEDPATH)\Colossal.Logging.dll</HintPath><Private>false</Private></Reference>
     <Reference Include="Unity.Entities"><HintPath>$(CSII_MANAGEDPATH)\Unity.Entities.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Unity.Collections"><HintPath>$(CSII_MANAGEDPATH)\Unity.Collections.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Unity.Mathematics"><HintPath>$(CSII_MANAGEDPATH)\Unity.Mathematics.dll</HintPath><Private>false</Private></Reference>
     <Reference Include="MessyCore"><HintPath>..\MessyCore\bin\Release\net48\MessyCore.dll</HintPath><Private>false</Private></Reference>
   </ItemGroup>
 
@@ -40,3 +42,4 @@
     <Message Text="[MessyTrafficTools] Asset content deployed to $(DeployDir)" Importance="high" />
   </Target>
 </Project>
+
