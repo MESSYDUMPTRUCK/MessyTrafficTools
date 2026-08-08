@@ -1,0 +1,11 @@
+{
+  "ID": "MessyTrafficTools",
+  "Name": "Messy TrafficTools",
+  "ShortDescription": "Traffic settings and operations module for the Messy mod pack.",
+  "Description": "Traffic settings and operations module for the Messy mod pack. Requires Messy Core.",
+  "Author": "MESSYDUMPTRUCK",
+  "AuthorID": "messydumptruck",
+  "Version": "0.1.0-beta",
+  "Dependencies": [ { "ID": "MessyCore", "Name": "Messy Core" } ],
+  "Tags": ["Code Mod"]
+}

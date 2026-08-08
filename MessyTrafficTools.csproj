@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>9</LangVersion>
+    <Nullable>disable</Nullable>
+    <AssemblyName>MessyTrafficTools</AssemblyName>
+    <RootNamespace>MessyTrafficTools</RootNamespace>
+    <Version>0.1.0-beta</Version>
+    <CSII_MANAGEDPATH>C:\Program Files (x86)\Steam\steamapps\common\Cities Skylines II\Cities2_Data\Managed</CSII_MANAGEDPATH>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Game"><HintPath>$(CSII_MANAGEDPATH)\Game.dll</HintPath></Reference>
+    <Reference Include="Colossal.Core"><HintPath>$(CSII_MANAGEDPATH)\Colossal.Core.dll</HintPath></Reference>
+    <Reference Include="Colossal.Logging"><HintPath>$(CSII_MANAGEDPATH)\Colossal.Logging.dll</HintPath></Reference>
+    <Reference Include="Unity.Entities"><HintPath>$(CSII_MANAGEDPATH)\Unity.Entities.dll</HintPath></Reference>
+    <Reference Include="MessyCore"><HintPath>..\MessyCore\bin\Release\net48\MessyCore.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+</Project>

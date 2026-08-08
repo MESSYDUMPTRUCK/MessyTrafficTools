@@ -1,0 +1,13 @@
+<Publish>
+  <ModId Value="" />
+  <DisplayName Value="Messy TrafficTools" />
+  <ShortDescription Value="Messy TrafficTools module for the MESSYDUMPTRUCK shared-core pack." />
+  <LongDescription Value="Messy TrafficTools is a module in the MESSYDUMPTRUCK shared-core modular pack architecture and depends on Messy Core." />
+  <Thumbnail Value="Properties\Thumbnail.png" />
+  <ModVersion Value="0.1.0-beta" />
+  <GameVersion Value="1.*.*" />
+  <ChangeLog Value="v0.1.0-beta — first shared-core pack release." />
+  <Tag Value="Code Mod" />
+  <Dependency Id="MessyCore" />
+  <AccessLevel Value="Public" />
+</Publish>
