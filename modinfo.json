@@ -6,6 +6,6 @@
   "Author": "MESSYDUMPTRUCK",
   "AuthorID": "messydumptruck",
   "Version": "0.1.0-beta",
-  "Dependencies": [ { "ID": "MessyCore", "Name": "Messy Core" } ],
+  "Dependencies": [ { "ID": 154397, "Name": "Messy Core" } ],
   "Tags": ["Code Mod"]
 }
