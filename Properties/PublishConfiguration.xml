@@ -4,12 +4,13 @@
   <ShortDescription Value="Messy TrafficTools module for the MESSYDUMPTRUCK shared-core pack." />
   <LongDescription Value="Messy TrafficTools is a module in the MESSYDUMPTRUCK shared-core modular pack architecture and depends on Messy Core." />
   <Thumbnail Value="Properties\Thumbnail.png" />
-  <ModVersion Value="0.1.0-beta" />
+  <ModVersion Value="0.1.1-beta" />
   <GameVersion Value="1.*.*" />
-  <ChangeLog Value="v0.1.0-beta — first shared-core pack release." />
+  <ChangeLog Value="v0.1.1-beta — adds directional light management capability tracking and section icon support." />
   <Tag Value="Code Mod" />
   <Dependency Id="154397" />
   <AccessLevel Value="Public" />
 </Publish>
+
 
 

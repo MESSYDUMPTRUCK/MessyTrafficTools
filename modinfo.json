@@ -5,7 +5,15 @@
   "Description": "Traffic settings, operations, and signaling helpers for the MESSYDUMPTRUCK modular pack. Requires Messy Core.",
   "Author": "MESSYDUMPTRUCK",
   "AuthorID": "messydumptruck",
-  "Version": "0.1.0-beta",
-  "Dependencies": [ { "ID": 154397, "Name": "Messy Core" } ],
-  "Tags": ["Code Mod", "Traffic"]
+  "Version": "0.1.1-beta",
+  "Dependencies": [
+    {
+      "ID": 154397,
+      "Name": "Messy Core"
+    }
+  ],
+  "Tags": [
+    "Code Mod",
+    "Traffic"
+  ]
 }
