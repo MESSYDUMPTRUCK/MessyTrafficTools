@@ -1,18 +1,42 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <Configurations>Debug;Release</Configurations>
     <TargetFramework>net48</TargetFramework>
     <LangVersion>9</LangVersion>
     <Nullable>disable</Nullable>
     <AssemblyName>MessyTrafficTools</AssemblyName>
     <RootNamespace>MessyTrafficTools</RootNamespace>
-    <Version>0.1.0-beta</Version>
+    <Version>0.1.1-beta</Version>
     <CSII_MANAGEDPATH>C:\Program Files (x86)\Steam\steamapps\common\Cities Skylines II\Cities2_Data\Managed</CSII_MANAGEDPATH>
+    <PublishConfigurationPath>Properties\PublishConfiguration.xml</PublishConfigurationPath>
   </PropertyGroup>
+
+  <Import Project="$([System.Environment]::GetEnvironmentVariable('CSII_TOOLPATH', 'EnvironmentVariableTarget.User'))\Mod.props" />
+  <Import Project="$([System.Environment]::GetEnvironmentVariable('CSII_TOOLPATH', 'EnvironmentVariableTarget.User'))\Mod.targets" />
+
   <ItemGroup>
-    <Reference Include="Game"><HintPath>$(CSII_MANAGEDPATH)\Game.dll</HintPath></Reference>
-    <Reference Include="Colossal.Core"><HintPath>$(CSII_MANAGEDPATH)\Colossal.Core.dll</HintPath></Reference>
-    <Reference Include="Colossal.Logging"><HintPath>$(CSII_MANAGEDPATH)\Colossal.Logging.dll</HintPath></Reference>
-    <Reference Include="Unity.Entities"><HintPath>$(CSII_MANAGEDPATH)\Unity.Entities.dll</HintPath></Reference>
+    <Reference Include="Game"><HintPath>$(CSII_MANAGEDPATH)\Game.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Colossal.Core"><HintPath>$(CSII_MANAGEDPATH)\Colossal.Core.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Colossal.Logging"><HintPath>$(CSII_MANAGEDPATH)\Colossal.Logging.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Unity.Entities"><HintPath>$(CSII_MANAGEDPATH)\Unity.Entities.dll</HintPath><Private>false</Private></Reference>
     <Reference Include="MessyCore"><HintPath>..\MessyCore\bin\Release\net48\MessyCore.dll</HintPath><Private>false</Private></Reference>
   </ItemGroup>
+
+  <ItemGroup>
+    <None Include="$(ModPropsFile)" Link="Properties\Mod.props" />
+    <None Include="$(ModTargetsFile)" Link="Properties\Mod.targets" />
+    <None Include="modinfo.json"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></None>
+    <None Include="Assets\**\*"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></None>
+    <None Include="Properties\Thumbnail.png"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></None>
+  </ItemGroup>
+
+  <Target Name="DeployAssetContent" AfterTargets="DeployWIP">
+    <ItemGroup>
+      <AssetFiles Include="Assets\**\*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(AssetFiles)"
+          DestinationFiles="@(AssetFiles->'$(DeployDir)\%(RecursiveDir)%(Filename)%(Extension)')"
+          SkipUnchangedFiles="true" />
+    <Message Text="[MessyTrafficTools] Asset content deployed to $(DeployDir)" Importance="high" />
+  </Target>
 </Project>
