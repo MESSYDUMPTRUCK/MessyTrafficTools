@@ -2,10 +2,10 @@
   "ID": "MessyTrafficTools",
   "Name": "Messy Traffic Tools",
   "ShortDescription": "Traffic settings, operations, and signaling helpers for the MESSYDUMPTRUCK modular pack.",
-  "Description": "Traffic settings, operations, and signaling helpers for the MESSYDUMPTRUCK modular pack. Requires Messy Core.",
+  "Description": "Traffic settings, operations, and signaling helpers for the MESSYDUMPTRUCK modular pack. Requires Messy Core. Use only one source at a time: local dev copy or PDX subscription.",
   "Author": "MESSYDUMPTRUCK",
   "AuthorID": "messydumptruck",
-  "Version": "0.1.1-beta",
+  "Version": "0.1.2-beta",
   "Dependencies": [
     {
       "ID": 154397,
